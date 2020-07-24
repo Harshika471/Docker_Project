@@ -2,5 +2,7 @@ FROM python:3-alpine
 
 ADD . /root
 WORKDIR /root
+RUN chmod 755 Assignment.py
 
-CMD [ "python","Assignment.py", "/tmp" ]
+ENTRYPOINT [ "python", "Assignment.py" ]
+
